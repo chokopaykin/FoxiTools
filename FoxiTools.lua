@@ -1,6 +1,6 @@
 -- главное
 script_name("Foxi Tools")
-script_version("v0.0.4")
+script_version("v0.0.2")
 
 local enable_autoupdate = true -- false to disable auto-update + disable sending initial telemetry (server, moonloader version, script version, samp nickname, virtual volume serial number)
 local autoupdate_loaded = false
@@ -10,7 +10,7 @@ if enable_autoupdate then
     if updater_loaded then
         autoupdate_loaded, Update = pcall(Updater)
         if autoupdate_loaded then
-            Update.json_url = "https://raw.githubusercontent.com/chokopaykin/FoxiTools/refs/heads/main/updater.json" .. tostring(os.clock())
+            Update.json_url = "https://raw.githubusercontent.com/chokopaykin/FoxiTools/refs/heads/main/updater.json?token=GHSAT0AAAAAACX2WIC37FBXGFELUGVNBP4WZXPA63Q" .. tostring(os.clock())
             Update.prefix = "[" .. string.upper(thisScript().name) .. "]: "
             Update.url = "https://github.com/chokopaykin/FoxiTools/"
         end
