@@ -122,24 +122,6 @@ local checkbox1 = new.bool()
 local checkbox2 = new.bool()
 local blocknote = new.char[10000]()
 local actien = new.bool(ini.mainIni.actien)
-local renderWindow = imgui.new.bool(true)
-local showPieMenu = imgui.new.bool(false)
-local menuItems = {
-    { label = '/dealing', action = function() sampSendChat("/b /dealing") end },
-    {
-        label = 'cost', items = {
-            { label = '100$', action = function() showPieMenu[0] = not showPieMenu[0] end },
-            { label = '200$', action = function() showPieMenu[0] = not showPieMenu[0] end },
-            { label = u8'Себе', action = function() sampSendChat("/inscar") end }
-        }
-    },
-    {
-        label = 'user', items = {
-            { label = u8'Реклама', action = function() sampSendChat("Работает автодилер") end },
-            { label = u8'Скилл', action = function() sampSendChat("/carskill") end }
-        }
-    }
-}
 
 -- initialization table
 local lu_rus, ul_rus = {}, {}
