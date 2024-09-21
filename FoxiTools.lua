@@ -10,7 +10,7 @@ if enable_autoupdate then
     if updater_loaded then
         autoupdate_loaded, Update = pcall(Updater)
         if autoupdate_loaded then
-            Update.json_url = "https://raw.githubusercontent.com/chokopaykin/FoxiTools/refs/heads/main/updater.json?token=GHSAT0AAAAAACX2WIC37FBXGFELUGVNBP4WZXPA63Q" .. tostring(os.clock())
+            Update.json_url = "https://raw.githubusercontent.com/chokopaykin/FoxiTools/refs/heads/main/updater.json" .. tostring(os.clock())
             Update.prefix = "[" .. string.upper(thisScript().name) .. "]: "
             Update.url = "https://github.com/chokopaykin/FoxiTools/"
         end
